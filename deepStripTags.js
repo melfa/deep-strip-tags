@@ -1,9 +1,9 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 var lodashIsstring = require("lodash.isstring");
 var stripTags = require("striptags");
-function deepStripTags(object, attributes) {
-    for (var attribute in Object.keys(object)) {
+module.exports = function deepStripTags(object, attributes) {
+    for (var _i = 0, _a = Object.keys(object); _i < _a.length; _i++) {
+        var attribute = _a[_i];
         if (undefined !== attributes && -1 === attributes.indexOf(attribute)) {
             continue;
         }
@@ -12,6 +12,5 @@ function deepStripTags(object, attributes) {
         }
         object[attribute] = stripTags(object[attribute]);
     }
-}
-exports.deepStripTags = deepStripTags;
+};
 //# sourceMappingURL=deepStripTags.js.map

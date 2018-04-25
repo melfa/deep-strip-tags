@@ -2,7 +2,7 @@
   "name": "deep-strip-tags",
   "description": "Strip tags from object's string properties recursively (Node.JS)",
   "author": "Mikhail Elfimov (https://github.com/melfa)",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "license": "MIT",
   "main": "deepStripTags.js",
   "types": "deepStripTags.d.ts",
@@ -10,6 +10,11 @@
     "type": "git",
     "url": "https://github.com/melfa/deep-strip-tags.git"
   },
+  "files": [
+    "deepStripTags.js",
+    "deepStripTags.js.map",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "./node_modules/.bin/tsc"
   },
