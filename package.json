@@ -11,6 +11,7 @@
     "url": "https://github.com/melfa/deep-strip-tags.git"
   },
   "files": [
+    "deepStripTags.d.ts",
     "deepStripTags.js",
     "deepStripTags.js.map",
     "LICENSE"
