@@ -5,17 +5,27 @@ Written in Typescript, provided NPM package contains compiled ES5 Javascript.
 
 ## Usage
 
+```typescript
+function deepStripTags(object: { [index: string]: any }, attributes?: string[])
+```
+
 ```javascript
 const deepStripTags = require('deep-strip-tags');
-deepStripTags(userProfile, [
-  'firstName',
-  'lastName',
-  'contactEmail',
-  'contactPhone',
-  'about',
-]);
+t = { a: '<a>hello</a>', b: { c: '<b>test</b>' }, d: 'world' };
+
+// strip tags from all string properties
+deepStripTags(t);
+// t: { a: 'hello', b: { c: 'test' }, d: 'world' }
+
+// strip tags from selected properties
+deepStripTags(t, ['a']);
+// t: { a: 'hello', b: { c: '<b>test</b>' }, d: 'world' }
 ```
-Typescript typings included.
+
+Typescript typings included:
+```typescript
+import * as deepStripTags from 'deep-strip-tags';
+```
 
 ## Installing
 ```
